@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    
+    .container{
+        height: 700px;
+        width: 900px;
+        background-color: brown;
+        display: grid;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: rgb(60, 84, 205);
+    }
+    .item2{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        background-color: antiquewhite;
+    }
+    .item3{
+        grid-row-start: 2;
+        grid-row-end: 5;
+        background-color: rgba(199, 215, 56, 0.861);
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media screen and (max-Width:370px) {
+        .item1{
+            background-color: pink;
+            
+        }
+        .item2{
+            background-color: black;
+        }
+        .navbar{
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width:769px) {
+        .item1{
+            background-color: rgb(187, 51, 74);
+        }
+    }
+    @media screen and (min-width:375px) and (max-width:768px) {
+        .item1{
+            /* background-color: tomato; */
+            background-image: url('./pexels-photo-572897.jpeg');
+        }
+    }
+      
+</style>
+
+</head>
+<body>
+    <div class="container">
+     <div class="item1">
+        <div class="navbar">
+            <div class="item">NavBar</div>
+            <div class="item">Home</div>
+            <div class="item">About Us</div>
+            <div class="item">Contact Us</div>
+        </div>
+     </div>
+     <div class="item2">2</div>
+     <div class="item3">3</div>
+    </div>
+
+</body>
+</html>
