@@ -1,0 +1,23 @@
+<script>
+    count=0
+    let flag=false;
+    function isPrime()
+    {
+        const r=prompt("Enter number");
+        for( let i=2;i<r;i++)
+        {
+            if(r%i==0)
+            {
+                flag=true;
+            }
+        }
+        if(flag)
+        {
+            alert("Not Prime")
+        }
+        else
+        alert("Prime")
+    }
+    isPrime()
+    isPrime()
+</script>

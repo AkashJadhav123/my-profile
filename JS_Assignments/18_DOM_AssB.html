@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="profile"> My Profile Details </h2>
+    <h3 id="techstack"> Technology Stack </h3>
+    <ul>
+        <li class="liItem"> HTML and CSS </li>
+        <li class="liItem"> Agile and JIRA </li>
+        <li class="liItem"> Angular or React </li>
+        <li class="liItem"> Database</li>
+    </ul>
+    <h2> Hobbies  </h2>
+    <a href="https://www.google.com/" target="_blank" id="myProfile"> My Profile </a>
+    <div id="divProject">
+        <p> Project Description </p>
+    </div>
+    <script>
+         //console.log("-------------------------------------------------------------");
+         const profile = document.querySelector("#profile");
+         profile.style.color= 'orange';
+         //console.log("-------------------------------------------------------------");
+         const ul = document.querySelector("ul");
+         const li = document.querySelectorAll(".liItem");
+         ul.removeChild(li[1]);
+         //console.log("-------------------------------------------------------------");
+         const  myprofile = document.getElementById("myProfile");
+         myprofile.setAttribute("href","https://www.linkedin.com/");
+         
+         
+     </script>
+</body>
+
+</html>

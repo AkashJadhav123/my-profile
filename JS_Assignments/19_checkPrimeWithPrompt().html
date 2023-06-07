@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Check number is prime or not</h1>
+    </head>
+    <body>
+        <button type="button" id="checkPrime">PrimeOrNot</button>
+    </body>
+    <script>
+        count=0
+        const checkprime=document.querySelector("#checkPrime")
+        checkprime.addEventListener('click',()=>{
+           const value= prompt("Enter number to check")
+           console.log(value);
+           for(let i=1;i<=value;i++)
+           {
+            if(value%i==0)
+            {
+                count++
+            }
+           }
+         const r= count==2 ? true : false;
+         console.log(r);
+         if (r) {
+            console.log("prime");
+         }
+         else
+         {
+            console.log("not");
+         }
+        })
+    </script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="g"> Prihme </h1>
+    </body>
+    <script>
+        const r=document.querySelector("#g");
+        r.addEventListener('click',show())
+       function show()
+        {
+            console.log("hiihji");
+            r.style.color="red"
+        }
+        
+    </script>
+</html> -->
+

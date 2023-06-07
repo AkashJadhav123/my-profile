@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Session Storage</title>
+</head>
+<body>
+  <center><h2> Web Session Storage </h2></center>
+    <script>
+        var aaa= "Gloal variable";
+        window.sessionStorage.setItem("full Name","Virat Kohli")
+        window.sessionStorage.setItem("Country","India")
+        window.sessionStorage.setItem("State","MH")
+       const country= window.sessionStorage.getItem("Country")
+       console.log(country);
+    </script>
+</body>
+</html>
