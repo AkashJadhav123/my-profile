@@ -1,0 +1,4 @@
+class utilityClass{
+ userName;
+ moNo;
+}

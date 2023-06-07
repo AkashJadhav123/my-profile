@@ -1,0 +1,31 @@
+<p>giphy works!</p>
+<input type="search" #search>
+<button (click)="callGiphy(search)">Search</button>
+
+
+        <!-- <div *ngIf="isButtonClicked">
+                <div *ngFor="let l of link">
+                    <img src="{{l}}" alt="aj">
+                </div>
+        </div> -->
+
+
+        <div *ngIf="isButtonClicked">
+            <div class="row">
+                <div class="col" *ngFor="let l of link">
+                    <img src="{{ l }}" alt="aj">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div *ngIf="isButtonClicked">
+            <div class="row col-md-12">
+                <div class="col-md-3">
+                    <div *ngFor="let l of link">
+                        <img src="{{l}}" alt="aj">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        

@@ -1,0 +1,23 @@
+/* .grid-container {
+      display: grid;  
+      /*grid-template-columns: 1fr 2fr 2fr;  Three equal columns 
+      grid-gap: 10px; /* Gap between grid items 
+     padding : 50px; 
+    display: center;
+    justify-content: left;
+    align-items: center; 
+  }/*
+  /* .grid-item {
+    background-color: #e0e0e0;
+    padding: 10px;
+  } */
+
+
+  /* .test {
+    display: flex;
+    align-items: center;
+    /* padding-left: 10px; 
+  } 
+  /* .col-md-5 text-left rounded shadow py-5 {
+   align-content: start;
+  } */

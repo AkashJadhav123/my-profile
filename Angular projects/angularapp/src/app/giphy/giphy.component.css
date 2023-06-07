@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  

@@ -1,0 +1,47 @@
+<p>rapidapi works!</p>
+<!-- <div *ngFor="let item of r | keyvalue">
+    <strong>{{ item.key }}: {{ item.value }}</strong>
+</div> -->
+
+<!-- <ng-container *ngFor="let item of r | keyvalue">
+    <ng-container *ngIf="isObject(item.value)">
+        <div><strong>{{ item.key }}:</strong></div>
+        <div *ngFor="let nesteditem of item.value | keyvalue">
+            <span>{{nesteditem.key}}</span>:
+            <span>{{nesteditem.value}}</span>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isObject(item.value)">
+        <div><strong>{{ item.key }}:</strong> {{ item.value }}</div>
+    </ng-container>
+</ng-container> -->
+<div class="box">
+    <div class="container">
+        <img src="http://i.cricketcb.com/i/stats/fth/540x303/venue/images/289.jpg" alt="Aj">
+        <span style="padding-left: 50px;">Akash : Jadhav</span>
+    </div>
+    <table class="table table-striped">
+      <thead>
+         <tr>
+          <th>Player Id</th>
+          <th>Name</th>
+          <th>Team Name</th>
+          <th>Batting style</th>
+          <th>Role</th>
+      </thead>
+          <tbody>
+             <ng-container *ngFor="let t of t1.playerDetails">
+             <tr>
+                 <td>{{t.id}}</td>
+                 <td>{{t.fullName}}</td>
+                 <td>{{t.teamName}}</td>
+                 <td>{{t.battingStyle}}</td>
+                 <td>{{t.role}}</td>
+             </tr>
+         </ng-container>
+          </tbody>
+  </table>
+</div>
+
+
+

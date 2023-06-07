@@ -1,0 +1,24 @@
+<p>structural-directives-ass works!</p>
+
+<ul >
+    <li> <input type="checkbox" (change)="onChange($event)"> CHECK
+    <div *ngIf=" v ; else elseBlock " > 
+    <h1>
+        checkbox is checked
+    </h1> 
+    </div>
+    <ng-template #elseBlock >
+        <h1> checkbox is Un-checked </h1>
+    </ng-template>
+    </li>
+    
+    <li >
+        <input type="text" name="textBox" placeholder="Enter Course Name"  (change)="textentered($event)">
+        <!-- <button (click)="clearText()"  value="add" >   </button> -->
+        <input type="button" value="ADD">
+    </li>
+    <li>
+        
+    </li>
+</ul>
+

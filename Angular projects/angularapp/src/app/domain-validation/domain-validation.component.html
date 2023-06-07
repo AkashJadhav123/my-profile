@@ -1,0 +1,17 @@
+<p>domain-validation works!</p>
+
+<div class="container">
+    <div class="justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <h2>Form...</h2>
+            <form  #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+                <div class="form-group">
+                    <input email required  type="text" class="form-control" name="email" ngModel #email="ngModel">
+                    <small *ngIf="!email.valid && email.touched ">Enter valid mail</small>
+                </div>
+                <button type="submit" >Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+

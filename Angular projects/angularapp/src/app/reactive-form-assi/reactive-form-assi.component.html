@@ -1,0 +1,118 @@
+<p>reactive-form-assi works!</p>
+<div class="container">
+    <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+
+            <!-- <div class="grid-container"> -->
+            <!-- <div class="grid-item"> -->
+            <div class="col-md-4">
+                <img src="angularapp/src/assets/userLogin.png" alt="aj">
+                <div>
+                    <h3>Akash Jadhav</h3>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, impedit saepe ea ipsam a
+                        porro
+                        minima cupiditate, voluptatum odit voluptatibus accusamus quisquam perferendis. Sint, alias
+                        blanditiis dolorem pariatur saepe consequuntur?
+                    </p>
+                </div>
+            </div>
+
+            <!-- </div> -->
+
+            <!-- <div class="grid-item"> -->
+            <div class="col-md-4">
+                <div formGroupName="userDetails">
+                    <h3>User Details: </h3>
+                    <div class="form-group">
+                        <label for="name">Full Name :</label>
+                        <input type="text" class="form-control" formControlName="fullName" placeholder="Enter Full Name">
+                        <small *ngIf="!myReactiveForm.get('userDetails.fullName').valid && myReactiveForm.get('userDetails.fullName').touched">Enter valid name</small>
+                    </div><br>
+
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date Of Birth :</label><br>
+                        <input type="date" class="custom-control-input" formControlName="dateOfBirth"><br>
+                        <small *ngIf="!myReactiveForm.get('userDetails.dateOfBirth').valid">Enter Birth Date</small>
+                    </div><br>
+
+                    <div class="form-group">
+                        <!-- <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                            <input class="custom-control-input" type="radio" formControlName="gender"
+                                value="{{gender.value}}" id="{{gender.id}}">
+                            <label for="{{gender.id}}">{{gender.value}}</label>
+                        </div> -->
+                        <label for="gender">Gender :</label><br>
+                        <select name="gender" id="" class="form-control" formControlName="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div><br>
+
+                    <div class="form-group test ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="country">Country </label><br>
+                                <select name="country" class="form-control" formControlName="country">
+                                    <option value="India">INDIA</option>
+                                    <option value="China">CHINA</option>
+                                    <option value="Canada">CANADA</option>
+                                    <option value="America">AMERICA</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="phone">Phone</label><br>
+                                    <input type="tel" class="form-control" formControlName="phone"><br>
+                                    <!-- <span>mobile: 123456789</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label value="bio">bio</label><br>
+                        <textarea class="form-control" formControlName="bio"></textarea>
+                        <Small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.bio').valid && myReactiveForm.get('userDetails.bio').touched">Enter valid length in Bio</Small>
+                    </div> 
+                </div>
+            </div>
+
+                <div class="col-md-4">
+                    <h3>Account Details :</h3>
+                    <div formGroupName="accountDetails">
+                        <div class="form-group">
+                            <label for="username">User Name: </label><br>
+                            <input type="text" class="form-control" formControlName="userName" >
+                            <small class="text-danger" *ngIf="!myReactiveForm.get('accountDetails.userName').valid && myReactiveForm.get('accountDetails.userName').touched">
+                                <small *ngIf="myReactiveForm.get('accountDetails.userName').errors['required']">Please Enter User Name</small>
+                                <small *ngIf="myReactiveForm.get('accountDetails.userName').errors['minlength']">Minimum length must be 5</small>
+                                <small *ngIf="myReactiveForm.get('accountDetails.userName').errors['maxlength']">Max length of userName must be 25</small><br>
+                                <small *ngIf="myReactiveForm.get('accountDetails.userName').errors['pattern']">Only Letters and numbers are allowed</small>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label><br>
+                            <input type="email" class="form-control" formControlName="email">
+                        </div>
+                        <div class="form-group">
+
+                            <label for="password">password: </label><br>
+                            <input type="password" class="form-control" formControlName="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password: </label><br>
+                            <input type="password" class="form-control" formControlName="confirmPassword">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" value="check">Accept All
+                        </div>
+                    </div>  <br>
+                    <button type="submit">Submit</button>
+                </div>
+        </div>
+    </form>
+</div>
+

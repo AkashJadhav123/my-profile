@@ -1,0 +1,57 @@
+<p>country-state-list works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="selectedCountry($event)">
+                <option value="Default"> SELECT COUNTRY </option>
+                <option value="INDIA"> INDIA </option>
+                <option value="CANADA">  CANADA</option>
+                <option value="CHINA"> CHINA </option>
+            </select>
+        </div>
+    
+        <!-- <div>
+            <input  [attr.c]='country'>
+            {{country}}  {{state}}
+        </div> -->
+        
+        <!-- <div class="col-md-4" >
+            <select class="form-control" (change)="selectedState($event)">
+                <option value="Default"> States </option>
+                <option value="Maharashtra"> Maharashtra </option>
+                <option value="Beijing"> Beijing </option>
+                <option value="Ottawa"> Ottawa </option>
+            </select>
+        </div> -->
+        <div class="col-md-12" [ngSwitch]="country">
+            <h2 class="text-success" *ngSwitchCase="'INDIA'">
+                Maharashtra
+            </h2>
+            
+            <h2 class="text-success" *ngSwitchCase="'CANADA'">
+                Ottawa
+            </h2>
+            
+            <h2 class="text-success" *ngSwitchCase="'CHINA'">
+                Beijing
+            </h2>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getSelectedValue($event)" >
+                <option value="Default"> Select Product</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Mobile">Mobile</option>
+                <option value="TV">TV</option>
+            </select> -->
