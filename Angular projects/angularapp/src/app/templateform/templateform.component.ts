@@ -36,6 +36,7 @@ export class TemplateformComponent implements OnInit {
     this.isSubmitted = true;
     // api/ saveuserData(user: User); // api endpoint 
   
+    
 
   this.user = new User();
     this.user.userName = form.value.username;

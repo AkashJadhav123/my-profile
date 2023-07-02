@@ -8,6 +8,7 @@ import { FirebaseService } from './services/firebase.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'angular-app';
 
@@ -37,8 +38,10 @@ export class AppComponent {
     });
    }
 
-
-
+   data : string = 'red';
+   changecolor() {
+    this.data = 'blue';
+  }
 }
 
 

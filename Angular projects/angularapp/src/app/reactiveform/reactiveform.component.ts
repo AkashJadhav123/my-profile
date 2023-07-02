@@ -7,18 +7,19 @@ import { Observable } from 'rxjs';
   templateUrl: './reactiveform.component.html',
   styleUrls: ['./reactiveform.component.css']
 })
+
 export class ReactiveformComponent implements OnInit {
   genders = [
     { id : '1', value: 'Male'},
     { id: '2', value: 'Female'}
   ]
-  myReactiveForm: FormGroup;
+  myReactiveForm : FormGroup;
   
   constructor(private fb: FormBuilder) { 
     this.createForm();
   }
   
-  isSubmitted: boolean = false;
+  isSubmitted : boolean = false;
   notAllowedNames = ['Codemind', 'Technology'];
 
   ngOnInit() {
@@ -42,28 +43,28 @@ export class ReactiveformComponent implements OnInit {
   }
 
    createForm() {
-  //   this.myReactiveForm = new FormGroup({
-  //     'userDetails' : new FormGroup({
-  //       'username': new FormControl('', [Validators.required, this.NaNames.bind(this) ]) ,       
-  //       'email': new FormControl('',[Validators.required, Validators.email], this.NaEmails  ),      }),
-  //     'course': new FormControl('Angular'),
-  //     'gender': new FormControl('Male'),
-  //     'skills': new FormArray(
-  //       [
-  //         new FormControl('', Validators.required)
-  //       ]
-  //     )
-  //   })
+    this.myReactiveForm = new FormGroup({
+      'userDetails' : new FormGroup({
+        'username': new FormControl('', [Validators.required, this.NaNames.bind(this) ]) ,       
+        'email': new FormControl('',[Validators.required, Validators.email], this.NaEmails  ),      }),
+      'course': new FormControl('Angular'),
+      'gender': new FormControl('Male'),
+      'skills': new FormArray(
+        [
+          new FormControl('', Validators.required)
+        ]
+      )
+    })
   
-  this.myReactiveForm = this.fb.group({
-    userDetails: this.fb.group({
-      username: ['',  [Validators.required, this.NaNames.bind(this) ]],
-      email: ['', [Validators.required, Validators.email], this.NaEmails ]
-    }),
-    course: ['Angular'],
-    gender: ['Male'],
-    skills: this.fb.array([])
-   })
+  // this.myReactiveForm = this.fb.group({
+  //   userDetails: this.fb.group({
+  //     username: ['',  [Validators.required, this.NaNames.bind(this) ]],
+  //     email: ['', [Validators.required, Validators.email], this.NaEmails ]
+  //   }),
+  //   course: ['Angular'],
+  //   gender: ['Male'],
+  //   skills: this.fb.array([])
+  //  })
    }
   
 

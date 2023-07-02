@@ -1,0 +1,25 @@
+<p>taskmanagerassi works!</p>
+
+<div class="container">
+    <select #option>
+    <option *ngFor="let l of taskarray" >
+        <td>{{l.task}}</td>
+        <td>: {{l.duedate}}</td>
+    </option> 
+</select>
+<button type="button" (click)="enteredTask(option.value)">Submit Task</button>
+</div>
+
+<h1>Add new Task</h1>
+<div class="container text-align center col-md-4">
+    <h2 class="text-align center ">Task Management</h2>
+        <form>
+        <!-- ><label for="task">Enter Task : </label> -->
+       <input type="text" required class="borderless-input" placeholder="Enter Task*">              
+        <hr>
+        <label for="date">Select DAte :</label><br>
+        <input type="date" class="borderless-input">
+        </form>
+</div>
+
+

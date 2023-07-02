@@ -1,0 +1,49 @@
+
+<div class="grid-container">
+    <div class="header">Profile</div>
+    <div class="header">Name</div>
+    <div class="header">Gender</div>
+    <div class="header">Contact</div>
+    <div class="header">Location</div>
+
+
+    <div class="grid-item ">
+        <div *ngFor="let image of imagearray">
+            <img src="{{image}}" alt="aj">
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div *ngFor="let f of resultsarray">
+            <!-- <div>Ms :{{f.name.title}}</div> -->
+            <div>First Name :{{f.name.first}}</div>
+            <div>Last Name :{{f.name.last}}</div>
+            <br>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div *ngFor="let f of resultsarray">
+            <div>{{f.gender}}</div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div *ngFor="let f of resultsarray">
+            <div>Phone :{{f.phone}}</div>
+            <div>Email :{{f.email}}</div>
+            <br>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <div *ngFor="let f of resultsarray">
+            <div>City :{{f.location.city}}</div>
+            <div>State :{{f.location.state}}</div>
+            <div>PostCode :{{f.location.postcode}}</div>
+        </div>
+    </div>
+
+</div>

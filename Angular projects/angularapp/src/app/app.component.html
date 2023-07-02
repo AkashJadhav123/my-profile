@@ -26,7 +26,6 @@
 <!-- <app-ngstyle></app-ngstyle> -->
 <!-- <app-ng-class></app-ng-class> -->
 
-
 <!-- <app-structural-directives-ass></app-structural-directives-ass> -->
 <!-- <app-templateform></app-templateform> -->
 <!-- <app-domain-validation></app-domain-validation> -->
@@ -66,21 +65,24 @@
   </div>
 </div> -->
 
-
-
-<router-outlet></router-outlet>
-<nav>
+<router-outlet></router-outlet> 
+ <nav>
   <ul class="nav nav-tabs">
     <li class="nav-item"><a routerLink="about-us" class="nav-link">About Us</a></li>
     <li class="nav-item"><a routerLink="contact-us" class="nav-link">Contact Us</a></li>
     <li class="nav-item"><a routerLink="product" class="nav-link">Product</a></li>
     <li class="nav-item"><a   routerLinkActive="active myclass" routerLink="posts" class="nav-link">Posts</a></li>
+    <li class="nav-item"><a   routerLinkActive="active myclass" routerLink="pipe" class="nav-link">Pipe</a></li>
   </ul>
 </nav>
 
-
-
 <!-- giphy stickers -->
 <!-- <app-giphy></app-giphy> -->
-
 <!-- wikipedia refrence -->
+
+<!-- <app-hooks [parentData]="data">
+  <h1 #child>This is child content coming from parent component.</h1>  
+  </app-hooks>
+<button (click)="changecolor()">Change color</button> -->
+
+

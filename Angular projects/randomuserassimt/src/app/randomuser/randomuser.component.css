@@ -1,0 +1,63 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px; 
+    overflow-y: auto; 
+  }
+  
+  .header {
+    position: static;
+    top: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .grid-item {
+    padding: 10px;
+    background-color: #ffffff;
+    grid-auto-rows: minmax(100px, auto);
+    /* grid-row: 4/1; */
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
+  /* .grid-item img {
+    margin-bottom: 10px;
+} */
+
+
+  /* .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal-sized columns 
+    grid-auto-rows: minmax(100px, auto); /* Sets a minimum height of 100px for each row 
+    grid-gap: 10px; /* Adds a gap of 10px between grid items 
+  } 
+  
+  .grid-item {
+    border: 1px solid black; /* Adds a border to the grid items (for visualization purposes) 
+    padding: 10px; /* Adds padding to the grid items 
+  }
+
+
+
+
+
+
+
+
+  /* table.grid-container {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table.grid-container th,
+  table.grid-container td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  table.grid-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+   */

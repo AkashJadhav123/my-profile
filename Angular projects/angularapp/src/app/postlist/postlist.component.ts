@@ -9,17 +9,13 @@ import { Post } from '../model/post';
 })
 export class PostlistComponent implements OnInit {
 
-  arrPosts : Post[]= [];
   // DI 
   constructor(private postService: PostService) { }
-
+  arrPosts : Post[]= [];
   ngOnInit() {
-    this.postService.GetAllPosts().subscribe(res => {
+    this.postService.GetAllPosts().subscribe((res: Post[])=> {
       console.log('from post list', res);
       this.arrPosts = res;
     })
   }
 }
-
-
-

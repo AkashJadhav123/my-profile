@@ -42,10 +42,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { GiphyComponent } from './giphy/giphy.component';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { TestcomponentComponent } from './testcomponent/testcomponent.component';
-import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { PostlistComponent } from './postlist/postlist.component';
-
-
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -78,16 +78,15 @@ import { PostlistComponent } from './postlist/postlist.component';
     Comp4Component,
     AboutusComponent,
     ContactusComponent,
-  
     LoginComponent,
     PagenotfoundComponent,
     GiphyComponent,
     WikipediaComponent,
     TestcomponentComponent,
-    PostdetailsComponent,
     PostlistComponent,
-  
-    
+    PostdetailsComponent,
+    PipeComponent,
+    FilterPipe,
 
   ],
   imports: [
@@ -97,7 +96,7 @@ import { PostlistComponent } from './postlist/postlist.component';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [MyserviceService],

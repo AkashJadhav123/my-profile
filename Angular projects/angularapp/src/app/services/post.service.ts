@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { forkJoin } from 'rxjs/internal/observable/forkJoin';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +34,14 @@ export class PostService {
   {
    return this.httpClient.post(this.postUrl,body)
   }
+
+  // public requestDataFromMultipleSorces()   {
+  //   let response1 = this.httpClient.get(this.postUrl);
+  //   let response2 = this.httpClient.get('https://jsonplaceholder.typicode.com/users');
+  //   let response3 = this.httpClient.get('https://jsonplaceholder.typicode.com/comments');
+
+  //    forkJoin([response1, response2, response3]).subscribe(res => {
+  //     console.log(res);
+  //    })
+  // }
 }
